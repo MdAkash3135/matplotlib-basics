@@ -28,3 +28,31 @@ plt.xticks(x)
 plt.yticks(y)
 
 plt.show()
+
+
+
+x = [1,2,3]
+y = [2,4,6]
+
+plt.figure(figsize= (5,3), dpi=100)
+plt.plot(x,y, label='3x', color='r', marker='.')
+
+# plt.title("Our first Graph", fontdict={'fontname': 'Comic Sans MS' , 'fontsize': 20})
+ 
+
+plt.xlabel("X Axis ! ")
+plt.ylabel("Y axis")
+
+plt.xticks(x)
+plt.yticks(y)
+
+### Line number 2  
+
+x2 = np.arange(0, 4.5, 0.5)
+plt.plot(x2, x2**2)
+
+plt.legend()
+
+plt.savefig('akash.png')
+
+plt.show()
