@@ -77,3 +77,30 @@ for bar in bars:
 
 plt.figure(figsize=(6,4))
 plt.show()
+
+#Real World Example
+gas = pd.read_csv('gas_prices.csv')
+
+
+plt.title("Gas price Over country's")
+plt.plot(gas.Year, gas.USA, 'b.-',  label='USA')
+plt.plot(gas.Year, gas.Japan, 'r.-', label='Japan')
+plt.plot(gas.Year, gas['South Korea'], 'c.-' ,label='South Korea')
+
+
+
+for gas_obj in gas:
+  if gas_obj != 'Year':
+    plt.plot(gas.Year, gas[gas_obj])
+
+plt.xticks(gas.Year[:: 3])
+
+plt.yticks([0, 1, 2 , 3 ,4 ,5])
+
+plt.xlabel("Year")
+
+plt.ylabel("US Dollars")
+
+plt.legend()
+
+plt.show()
